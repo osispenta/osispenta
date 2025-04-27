@@ -1,17 +1,4 @@
 {
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1.html",
-      "headers": { "Content-Type": "text/html" },
-      "has": [
-        {
-          "type": "file",
-          "value": "/$1.html"
-        }
-      ]
-    },
-    {
       "src": "/(.*)\\.html",
       "status": 301,
       "headers": {
