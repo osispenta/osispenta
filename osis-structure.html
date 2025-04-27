@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi OSIS SMP Negeri 3 Muntok</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            background-color: #3c78d8;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before, .header::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 150px;
+            top: 0;
+            background-color: #ff9980;
+            z-index: 1;
+        }
+        
+        .header::before {
+            left: 0;
+        }
+        
+        .header::after {
+            right: 0;
+        }
+        
+        .header h1 {
+            margin: 5px 0;
+            position: relative;
+            z-index: 2;
+            font-size: 2.2rem;
+        }
+        
+        .header h2 {
+            position: relative;
+            z-index: 2;
+            font-size: 1.8rem;
+        }
+        
+        .header p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.4rem;
+        }
+        
+        .school-logo {
+            max-width: 80px;
+            margin: 0 auto 10px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .org-chart {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .box.clicked {
+            background-color: #e6f2ff;
+            border-color: #3c78d8;
+            transform: scale(1.05);
+        }
+        
+        .box h3 {
+            margin-bottom: 10px;
+            color: #3c78d8;
+        }
+        
+        .box p {
+            margin: 5px 0;
+        }
+        
+        .main-positions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .sub-positions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .section-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #e6f2ff;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .section-box.clicked {
+            background-color: #cce5ff;
+            border-color: #3c78d8;
+            transform: scale(1.05);
+        }
+        
+        .section-box h3 {
+            color: #3c78d8;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .section-box h4 {
+            color: #333;
+            margin: 5px 0;
+        }
+        
+        .section-box ul {
+            list-style-type: none;
+            padding-left: 10px;
+        }
+        
+        .section-box li {
+            margin: 5px 0;
+            font-size: 0.85rem;
+        }
+        
+        .line-container {
+            position: relative;
+            height: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 2px;
+            background-color: #3c78d8;
+        }
+        
+        .horizontal-line {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background-color: #3c78d8;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-positions, .sub-positions, .sections {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-positions, .sub-positions, .sections {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header h2 {
+                font-size: 1.4rem;
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        
+        .star {
+            color: #ffcc00;
+            font-size: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head><body>
+  <div class="container">
+    <div class="header">
+      <img src="/api/placeholder/80/80" alt="Logo SMP Negeri 3 Muntok" class="school-logo">
+      <h2>STRUKTUR ORGANISASI OSIS</h2>
+      <h1>SMP NEGERI 3 MUNTOK</h1>
+      <p>TAHUN 2024/2025</p>
+    </div>
+
+    <div class="org-chart">
+      <!-- Main Positions -->
+      <div class="main-positions">
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>KETUA</h3>
+          <p>Ida Safrina, S.pd</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>WAKIL KETUA</h3>
+          <p>Yofi Hermawan, S.pd</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>PEMBINA OSIS</h3>
+          <p>Ari Afriyanto, S.pd</p>
+        </div>
+      </div>
+
+      <!-- Secondary Positions -->
+      <div class="sub-positions">
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>KETUA OSIS</h3>
+          <p>Afgan Reza Habibi</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>WAKIL KETUA OSIS</h3>
+          <p>Anindhita Fitri Edis Lubis</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>SEKRETARIS</h3>
+          <p>Chila Evriza</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>WAKIL SEKRETARIS</h3>
+          <p>Meyrischa Q.A.</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>BENDAHARA</h3>
+          <p>Aisyah Afiqah</p>
+        </div>
+        <div class="box" onclick="this.classList.toggle('clicked')">
+          <h3>WAKIL BENDAHARA</h3>
+          <p>Chiya V.K.</p>
+        </div>
+      </div>
+
+      <!-- Connecting Lines -->
+      <div class="line-container">
+        <div class="vertical-line"></div>
+        <div class="horizontal-line"></div>
+      </div>
+
+      <!-- Sections -->
+      <div class="sections">
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Ketaqwaan terhadap Tuhan Yang Maha Esa</h3>
+          <h4>Koordinator: Naufal Azzam Kusuma</h4>
+          <ul>
+            <li>Chila Evriza</li>
+            <li>Nursilia Andinasari</li>
+            <li>Nizam Al Kheydy</li>
+            <li>Bunga Virineyzella</li>
+            <li>Asyifa Barhisani</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Pembinaan Kreativitas, Keterampilan, dan Kewirausahaan</h3>
+          <h4>Koordinator: Ixchel Vevilla Yanratu</h4>
+          <ul>
+            <li>Hanin Nurhanifah</li>
+            <li>Syaifani Asyarifa Badillah</li>
+            <li>Nabila Nurhama</li>
+            <li>Queenayra Radisti</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Kualitas Jasmani, Kesehatan, dan Gizi Berbasis Sumber Gizi Terdiversifikasi</h3>
+          <h4>Koordinator: Chiya Vasyera Khansa</h4>
+          <ul>
+            <li>Syakila Aprilia</li>
+            <li>Kurnia Mega</li>
+            <li>Meyrischa Qennschy Aurellia</li>
+            <li>Chelsea Oxshi Rahmadani</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Kepribadian Unggul, Wawasan Kebangsaan, dan Bela Negara</h3>
+          <h4>Koordinator: Zaidan Faris Alghazy</h4>
+          <ul>
+            <li>Novelia Yustiani</li>
+            <li>Chely Ramadhan Ningtyas</li>
+            <li>Gaara</li>
+            <li>Azahra</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Karya Ilmiah Remaja, Sains, dan Iptek</h3>
+          <h4>Koordinator: M. Fidi Habiburrahman</h4>
+          <ul>
+            <li>M. Irham Andika Putra</li>
+            <li>Ahmad Rafi Athala</li>
+            <li>Khaira Lubna</li>
+            <li>Yulia Apriani</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Demokrasi, HAM, Politik, Lingkungan Hidup, dan Toleransi Sosial</h3>
+          <h4>Koordinator: Oziel Gibran</h4>
+          <ul>
+            <li>Avra Seisaria</li>
+            <li>Haikal Al Kausar</li>
+            <li>Bilal Rahmadian</li>
+            <li>Khanaya Aprilia</li>
+            <li>M. Robhi Rizqullah</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Kepribadian dan Berbudi Luhur</h3>
+          <h4>Koordinator: Ferdi Nuril</h4>
+          <ul>
+            <li>Ghalin Nisa Izzati</li>
+            <li>Afifah Seviana Putri</li>
+            <li>Raditya Gara Ramadhan</li>
+            <li>Devilya Ramadhani</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Prestasi Akademik, Seni, dan/atau Olahraga</h3>
+          <h4>Koordinator: M. Nail Raziq</h4>
+          <ul>
+            <li>Aisyah Afiqah</li>
+            <li>Aninda Ainur Fadhill</li>
+            <li>Aditya Pratama</li>
+            <li>Riki Pratama</li>
+            <li>Vinniecia Hanevend</li>
+          </ul>
+        </div>
+
+        <div class="section-box" onclick="this.classList.toggle('clicked')">
+          <h3>Seksi Komunikasi dalam Bahasa Inggris</h3>
+          <h4>Koordinator: Danadyaksa</h4>
+          <ul>
+            <li>Alvinadamayanti</li>
+            <li>Nayla Chris Aulia</li>
+            <li>Renatafitria Ramadhan</li>
+            <li>Fathiya P. Varisha</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span class="star">★</span>
+      SMP NEGERI 3 MUNTOK
+      <span class="star">★</span>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const allBoxes = document.querySelectorAll('.box, .section-box');
+      allBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+          this.classList.toggle('clicked');
+          this.style.transition = 'all 0.3s ease';
+        });
+      });
+    });
+  </script>
+</body>
