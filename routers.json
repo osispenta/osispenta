@@ -1,9 +1,0 @@
-{
-      "src": "/(.*)\\.html",
-      "status": 301,
-      "headers": {
-        "Location": "/$1"
-      }
-    }
-  ]
-}
