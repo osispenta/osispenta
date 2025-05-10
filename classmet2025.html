@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pendaftaran Class Meeting SMPN 3 Mentok</title>
+  <style>
+    :root {
+      --primary-color: #1e88e5;
+      --secondary-color: #0d47a1;
+      --accent-color: #42a5f5;
+      --light-color: #f5f7fa;
+      --success-color: #4caf50;
+      --box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      margin: 0;
+      background: var(--light-color);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      box-shadow: var(--box-shadow);
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .form-welcome {
+      background: white;
+      padding: 25px;
+      box-shadow: var(--box-shadow);
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s;
+      box-sizing: border-box;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--accent-color);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--accent-color);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    button:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    #anggotaSection {
+      display: none;
+      background-color: rgba(66, 165, 245, 0.05);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    .anggota-input {
+      margin-bottom: 12px;
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      form, .form-welcome {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">SMP3</div>
+  <h1>Pendaftaran Lomba Class Meeting 2025</h1>
+  <p>SMP Negeri 3 Mentok</p>
+</header>
+
+<div class="container">
+  <div class="form-welcome" id="welcomeMessage">
+    <h2>Selamat Datang!</h2>
+    <p>Ayo daftarkan dirimu atau timmu untuk mengikuti Class Meeting SMPN 3 Mentok 2025! 🎉</p>
+    <p>Silahkan isi formulir dengan lengkap dan kirimkan via WhatsApp untuk konfirmasi pendaftaran.</p>
+    <button type="button" onclick="hideWelcome()">Mulai Pendaftaran</button>
+  </div>
+
+  <form id="registrationForm" class="hidden">
+    <h2>Formulir Pendaftaran</h2>
+
+    <div class="form-group">
+      <label for="nama">Nama Lengkap / Nama Tim</label>
+      <input type="text" id="nama" required placeholder="Masukkan nama lengkap atau nama tim">
+    </div>
+
+    <div class="form-group">
+      <label for="kelas">Kelas</label>
+      <select id="kelas" required>
+        <option value="">-- Pilih Kelas --</option>
+        <option>7A</option><option>7B</option><option>7C</option><option>7D</option>
+        <option>8A</option><option>8B</option><option>8C</option><option>8D</option><option>8E</option>
+        <option>9A</option><option>9B</option><option>9C</option><option>9D</option><option>9E</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="lomba">Pilih Lomba</label>
+      <select id="lomba" onchange="tampilkanAnggota()">
+        <option value="">-- Pilih Lomba --</option>
+        <option value="Futsal Putra">Futsal Putra</option>
+        <option value="Futsal Putri">Futsal Putri</option>
+        <option value="Public Speaking">Public Speaking</option>
+        <option value="Tarik Tambang">Tarik Tambang Putra</option>
+        <option value="Tarik Tambang">Tarik Tambang Putri</option>
+        <option value="Cabut Balon">Cabut Bilon Putra</option>
+        <option value="Cabut Balon">Cabut Bilon Putri</option>
+      </select>
+    </div>
+
+    <div id="anggotaSection">
+      <h3>Data Anggota Tim</h3>
+      <div class="form-group">
+        <label for="jumlahAnggota">Jumlah Anggota</label>
+        <input type="number" id="jumlahAnggota" min="1" max="10" onchange="buatInputAnggota()" placeholder="Masukkan jumlah anggota">
+      </div>
+      <div id="listAnggota"></div>
+    </div>
+
+    <button type="button" onclick="kirimWhatsApp()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+      </svg>
+      Kirim via WhatsApp
+    </button>
+  </form>
+
+  <div class="footer">By M.irham</div>
+  <div class="footer">
+    &copy; 2025 SMP Negeri 3 Mentok - Class Meeting  </div>
+</div>
+
+<script>
+  // Tampilkan pesan selamat datang saat halaman dimuat
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('welcomeMessage').classList.remove('hidden');
+    document.getElementById('registrationForm').classList.add('hidden');
+  });
+
+  function hideWelcome() {
+    document.getElementById('welcomeMessage').classList.add('hidden');
+    document.getElementById('registrationForm').classList.remove('hidden');
+  }
+
+  function tampilkanAnggota() {
+    const lomba = document.getElementById('lomba').value;
+    const anggotaSection = document.getElementById('anggotaSection');
+    const listAnggota = document.getElementById('listAnggota');
+    document.getElementById('jumlahAnggota').value = '';
+    listAnggota.innerHTML = '';
+    
+    if (["Futsal Putra", "Futsal Putri", "Tarik Tambang", "Cabut Balon"].includes(lomba)) {
+      anggotaSection.style.display = "block";
+    } else {
+      anggotaSection.style.display = "none";
+    }
+  }
+
+  function buatInputAnggota() {
+    const jumlah = parseInt(document.getElementById('jumlahAnggota').value);
+    const list = document.getElementById('listAnggota');
+    list.innerHTML = '';
+    
+    for (let i = 1; i <= jumlah; i++) {
+      const anggotaDiv = document.createElement('div');
+      anggotaDiv.className = 'anggota-input';
+      
+      const label = document.createElement('label');
+      label.textContent = `Anggota ${i}`;
+      label.htmlFor = `anggota${i}`;
+      
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.id = `anggota${i}`;
+      input.required = true;
+      input.placeholder = `Masukkan nama anggota ${i}`;
+      
+      anggotaDiv.appendChild(label);
+      anggotaDiv.appendChild(input);
+      list.appendChild(anggotaDiv);
+    }
+  }
+
+  function validateForm() {
+    const nama = document.getElementById('nama').value;
+    const kelas = document.getElementById('kelas').value;
+    const lomba = document.getElementById('lomba').value;
+    
+    if (!nama || !kelas || !lomba) {
+      alert('Mohon lengkapi data nama, kelas, dan lomba!');
+      return false;
+    }
+    
+    if (["Futsal Putra", "Futsal Putri", "Tarik Tambang", "Cabut Balon"].includes(lomba)) {
+      const jumlah = parseInt(document.getElementById('jumlahAnggota').value);
+      if (!jumlah || jumlah < 1) {
+        alert('Mohon masukkan jumlah anggota!');
+        return false;
+      }
+      
+      for (let i = 1; i <= jumlah; i++) {
+        const anggota = document.getElementById(`anggota${i}`).value;
+        if (!anggota) {
+          alert(`Mohon lengkapi data Anggota ${i}!`);
+          return false;
+        }
+      }
+    }
+    
+    return true;
+  }
+
+  function kirimWhatsApp() {
+    if (!validateForm()) return;
+    
+    const nama = document.getElementById('nama').value;
+    const kelas = document.getElementById('kelas').value;
+    const lomba = document.getElementById('lomba').value;
+    let pesan = `*Pendaftaran Class Meeting 2025*\n\nNama / Tim: ${nama}\nKelas: ${kelas}\nLomba: ${lomba}`;
+
+    if (["Futsal Putra", "Futsal Putri", "Tarik Tambang", "Cabut Balon"].includes(lomba)) {
+      const jumlah = parseInt(document.getElementById('jumlahAnggota').value);
+      pesan += `\n\n*Daftar Anggota (${jumlah} orang):*`;
+      for (let i = 1; i <= jumlah; i++) {
+        const anggota = document.getElementById(`anggota${i}`).value;
+        pesan += `\n${i}. ${anggota}`;
+      }
+    }
+    
+    pesan += "\n\n_Terima kasih telah mendaftar. Mohon tunggu konfirmasi dari panitia._";
+
+    const nomorTujuan = "6281274128917"; // Nomor tujuan
+    const url = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
