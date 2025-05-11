@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/api"
+
+collections:
+  - name: "halaman"
+    label: "Halaman Statis"
+    files:
+      - label: "Beranda"
+        name: "index"
+        file: "index.html"
+        fields:
+          - { label: "Konten", name: "body", widget: "markdown" }
+
+      - label: "Berita"
+        name: "berita"
+        file: "berita.html"
+        fields:
+          - { label: "Konten", name: "body", widget: "markdown" }
+
+      - label: "Kontak"
+        name: "kontak"
+        file: "kontak.html"
+        fields:
+          - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "artikel"
+    label: "Artikel"
+    folder: "artikel"
+    create: true
+    extension: "html"
+    format: "frontmatter"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Konten", name: "body", widget: "markdown" }
+      - { label: "Deskripsi Meta", name: "meta_description", widget: "string" }
+      - { label: "Gambar OG", name: "meta_image", widget: "image" }
+      - { label: "URL OG", name: "meta_url", widget: "string" }
