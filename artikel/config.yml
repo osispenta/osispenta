@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "img"
-public_folder: "/api"
+media_folder: "uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "halaman"
@@ -31,7 +31,7 @@ collections:
     label: "Artikel"
     folder: "artikel"
     create: true
-    extension: "html"
+    extension: "md"
     format: "frontmatter"
     fields:
       - { label: "Judul", name: "title", widget: "string" }
