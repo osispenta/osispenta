@@ -2,353 +2,485 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pendaftaran Class Meeting SMPN 3 Mentok</title>
-  <!-- Vercel Analytics -->
-<script>
-window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Class Meeting SMPN 3 Mentok 2025 - Edisi Terbaru!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
-    :root {
-      --primary-color: #1e88e5;
-      --secondary-color: #0d47a1;
-      --accent-color: #42a5f5;
-      --light-color: #f5f7fa;
-      --success-color: #4caf50;
-      --box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
-
     body {
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
-      margin: 0;
-      background: var(--light-color);
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      background-color: #e0e7ff; /* Lighter Indigo background */
     }
-
-    header {
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
+    .form-container {
       background-color: white;
-      border-radius: 50%;
-      margin: 0 auto 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 24px;
-      color: var(--primary-color);
+      padding: 2rem 2.5rem; /* Increased padding */
+      border-radius: 16px; /* More rounded corners */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* Softer, larger shadow */
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #c7d2fe; /* Light indigo border */
     }
-
-    .container {
-      max-width: 650px;
-      margin: 30px auto;
-      padding: 0 15px;
-    }
-
-    form {
-      background: white;
-      padding: 30px;
-      box-shadow: var(--box-shadow);
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .form-welcome {
-      background: white;
-      padding: 25px;
-      box-shadow: var(--box-shadow);
-      border-radius: 12px;
-      text-align: center;
-      margin-bottom: 20px;
-      border-left: 4px solid var(--accent-color);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--secondary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: var(--secondary-color);
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 16px;
-      transition: all 0.3s;
-      box-sizing: border-box;
-    }
-
-    input:focus, select:focus {
-      border-color: var(--accent-color);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      background-color: var(--accent-color);
+    .btn-primary {
+      background-image: linear-gradient(to right, #4f46e5, #7c3aed); /* Indigo to Purple gradient */
       color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      transition: all 0.4s ease, transform 0.2s ease;
+      box-shadow: 0 4px 15px 0 rgba(79, 70, 229, 0.35);
     }
-
-    button:hover {
-      background-color: var(--primary-color);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .btn-primary:hover {
+      background-image: linear-gradient(to right, #7c3aed, #4f46e5);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.4);
     }
-
-    #anggotaSection {
-      display: none;
-      background-color: rgba(66, 165, 245, 0.05);
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 3px solid var(--accent-color);
-      margin-bottom: 20px;
+    .input-field {
+      border-color: #cbd5e1; /* Cool Gray 300 */
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px; /* Slightly more rounded inputs */
     }
-
-    .anggota-input {
-      margin-bottom: 12px;
+    .input-field:focus {
+      border-color: #6366f1; /* Indigo 500 */
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+      outline: none;
+    }
+    .fade-in-up {
+      animation: fadeInUpAnimation 0.6s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInUpAnimation {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .loading-spinner {
+      border: 3px solid rgba(255, 255, 255, 0.4);
+      border-top-color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .section-title {
+      font-weight: 600;
+      color: #4338ca; /* Indigo 700 */
+      padding-bottom: 8px;
+      border-bottom: 2px solid #a5b4fc; /* Indigo 300 */
+      margin-bottom: 1.25rem;
+      display: inline-block;
+    }
+    .optional-label {
+      font-size: 0.75rem;
+      color: #6b7280; /* Gray 500 */
+      font-weight: 400;
+    }
+    .custom-select-arrow {
+      pointer-events: none;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6b7280; /* Gray 500 */
+    }
+    .header-gradient {
+      background: linear-gradient(135deg, #4f46e5 0%, #a259ff 100%); /* Indigo to a lighter purple */
+    }
+    .logo-circle {
       background: white;
-      padding: 12px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 30px;
-      color: #666;
-      font-size: 14px;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    @media (max-width: 600px) {
-      form, .form-welcome {
-        padding: 20px;
-      }
-      
-      h1 {
-        font-size: 1.8rem;
-      }
+      color: #4f46e5; /* Match header gradient start */
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
     }
   </style>
 </head>
-<body>
+<body class="antialiased">
 
-<header>
-  <div class="logo">SMP3</div>
-  <h1>Pendaftaran Lomba Class Meeting 2025</h1>
-  <p>SMP Negeri 3 Mentok</p>
-</header>
-
-<div class="container">
-  <div class="form-welcome" id="welcomeMessage">
-    <h2>Selamat Datang!</h2>
-    <p>Ayo daftarkan dirimu atau timmu untuk mengikuti Class Meeting SMPN 3 Mentok 2025! 🎉</p>
-    <p>Silahkan isi formulir dengan lengkap dan kirimkan via WhatsApp untuk konfirmasi pendaftaran.</p>
-    <button type="button" onclick="hideWelcome()">Mulai Pendaftaran</button>
-  </div>
-
-  <form id="registrationForm" class="hidden">
-    <h2>Formulir Pendaftaran</h2>
-
-    <div class="form-group">
-      <label for="nama">Nama Lengkap / Nama Tim</label>
-      <input type="text" id="nama" required placeholder="Masukkan nama lengkap atau nama tim">
-    </div>
-
-    <div class="form-group">
-      <label for="kelas">Kelas</label>
-      <select id="kelas" required>
-        <option value="">-- Pilih Kelas --</option>
-        <option>7A</option><option>7B</option><option>7C</option><option>7D</option>
-        <option>8A</option><option>8B</option><option>8C</option><option>8D</option><option>8E</option>
-        <option>9A</option><option>9B</option><option>9C</option><option>9D</option><option>9E</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="lomba">Pilih Lomba</label>
-      <select id="lomba" onchange="tampilkanAnggota()">
-        <option value="">-- Pilih Lomba --</option>
-        <option value="Futsal Putra">Futsal Putra</option>
-        <option value="Public Speaking">Public Speaking</option>
-        <option value="Tarik Tambang">Tarik Tambang Putra</option>
-        <option value="Tarik Tambang">Tarik Tambang Putri</option>
-        <option value="Cabut Balon">Cabut Bilon Putra</option>
-        <option value="Cabut Balon">Cabut Bilon Putri</option>
-      </select>
-    </div>
-
-    <div id="anggotaSection">
-      <h3>Data Anggota Tim</h3>
-      <div class="form-group">
-        <label for="jumlahAnggota">Jumlah Anggota</label>
-        <input type="number" id="jumlahAnggota" min="1" max="10" onchange="buatInputAnggota()" placeholder="Masukkan jumlah anggota">
+  <header class="header-gradient text-white py-10 sm:py-16 text-center shadow-xl relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 bg-white opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="mx-auto logo-circle rounded-full w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center text-4xl sm:text-5xl font-bold mb-5">
+        S3M
       </div>
-      <div id="listAnggota"></div>
+      <h1 class="text-4xl sm:text-5xl font-bold mb-3 tracking-tight">Class Meeting Seru 2025!</h1>
+      <p class="text-xl sm:text-2xl opacity-90">SMP Negeri 3 Mentok</p>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10 sm:py-14">
+    <div id="welcomeMessage" class="form-container max-w-lg mx-auto text-center fade-in-up">
+      <i class="fas fa-trophy text-5xl text-amber-400 mb-5"></i>
+      <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800 mb-4">Yuk, Daftar Class Meeting!</h2>
+      <p class="text-gray-600 mb-6 text-base sm:text-lg leading-relaxed">
+        Tunjukkan bakat dan semangatmu di Class Meeting SMPN 3 Mentok 2025! Berbagai lomba seru menanti. 🥳
+      </p>
+      <p class="text-gray-500 mb-8 text-sm sm:text-base">
+        Isi formulir pendaftaran dengan cermat ya. Konfirmasi akan dikirim via WhatsApp.
+      </p>
+      <button type="button" onclick="showRegistrationForm()" class="btn-primary font-semibold py-3.5 px-10 rounded-xl text-base sm:text-lg shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300">
+        <i class="fas fa-pencil-alt mr-2"></i>Mulai Pendaftaran
+      </button>
     </div>
 
-    <button type="button" onclick="kirimWhatsApp()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
-      </svg>
-      Kirim via WhatsApp
-    </button>
-  </form>
-
-  <div class="footer">By M.irham</div>
-  <div class="footer">
-    &copy; 2025 SMP Negeri 3 Mentok - Class Meeting  </div>
-</div>
-
-<script>
-  // Tampilkan pesan selamat datang saat halaman dimuat
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('welcomeMessage').classList.remove('hidden');
-    document.getElementById('registrationForm').classList.add('hidden');
-  });
-
-  function hideWelcome() {
-    document.getElementById('welcomeMessage').classList.add('hidden');
-    document.getElementById('registrationForm').classList.remove('hidden');
-  }
-
-  function tampilkanAnggota() {
-    const lomba = document.getElementById('lomba').value;
-    const anggotaSection = document.getElementById('anggotaSection');
-    const listAnggota = document.getElementById('listAnggota');
-    document.getElementById('jumlahAnggota').value = '';
-    listAnggota.innerHTML = '';
-    
-    if (["Futsal Putra", "Futsal Putri", "Tarik Tambang", "Cabut Balon"].includes(lomba)) {
-      anggotaSection.style.display = "block";
-    } else {
-      anggotaSection.style.display = "none";
-    }
-  }
-
-  function buatInputAnggota() {
-    const jumlah = parseInt(document.getElementById('jumlahAnggota').value);
-    const list = document.getElementById('listAnggota');
-    list.innerHTML = '';
-    
-    for (let i = 1; i <= jumlah; i++) {
-      const anggotaDiv = document.createElement('div');
-      anggotaDiv.className = 'anggota-input';
+    <form id="registrationForm" class="form-container max-w-xl mx-auto hidden">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800 mb-8 text-center section-title">Formulir Pendaftaran</h2>
       
-      const label = document.createElement('label');
-      label.textContent = `Anggota ${i}`;
-      label.htmlFor = `anggota${i}`;
-      
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.id = `anggota${i}`;
-      input.required = true;
-      input.placeholder = `Masukkan nama anggota ${i}`;
-      
-      anggotaDiv.appendChild(label);
-      anggotaDiv.appendChild(input);
-      list.appendChild(anggotaDiv);
-    }
-  }
+      <div id="formFeedback" class="mb-5 text-sm"></div>
 
-  function validateForm() {
-    const nama = document.getElementById('nama').value;
-    const kelas = document.getElementById('kelas').value;
-    const lomba = document.getElementById('lomba').value;
-    
-    if (!nama || !kelas || !lomba) {
-      alert('Mohon lengkapi data nama, kelas, dan lomba!');
-      return false;
+      <div class="mb-6">
+        <label for="nama" class="block text-sm font-medium text-gray-700 mb-1.5">Nama Lengkap / Nama Tim <span class="text-red-500">*</span></label>
+        <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Sudarsono / Tim Elang" class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none text-sm sm:text-base">
+        <p id="namaError" class="error-message hidden mt-1">Nama tidak boleh kosong.</p>
+      </div>
+
+      <div class="mb-6">
+        <label for="kelas" class="block text-sm font-medium text-gray-700 mb-1.5">Kelas <span class="text-red-500">*</span></label>
+        <div class="relative">
+          <select id="kelas" name="kelas" required class="input-field appearance-none w-full px-4 py-3 rounded-lg border bg-white focus:outline-none text-sm sm:text-base">
+            <option value="">-- Pilih Kelas --</option>
+            <option>7A</option><option>7B</option><option>7C</option><option>7D</option>
+            <option>8A</option><option>8B</option><option>8C</option><option>8D</option><option>8E</option>
+          </select>
+          <div class="custom-select-arrow absolute inset-y-0 right-0 flex items-center px-3 text-gray-700">
+            <i class="fas fa-chevron-down fa-xs"></i>
+          </div>
+        </div>
+        <p id="kelasError" class="error-message hidden mt-1">Kelas harus dipilih.</p>
+      </div>
+
+      <div class="mb-7">
+        <label for="lomba" class="block text-sm font-medium text-gray-700 mb-1.5">Pilih Lomba <span class="text-red-500">*</span></label>
+        <div class="relative">
+          <select id="lomba" name="lomba" onchange="handleLombaChange()" required class="input-field appearance-none w-full px-4 py-3 rounded-lg border bg-white focus:outline-none text-sm sm:text-base">
+            <option value="">-- Pilih Lomba --</option>
+            <option value="Futsal Putra">Futsal Putra (Tim)</option>
+            <option value="Public Speaking">Public Speaking (Individu)</option>
+            <option value="Vocal Solo">Vocal Solo (Individu)</option>
+            <option value="Tarik Tambang Putra">Tarik Tambang Putra (Tim)</option>
+            <option value="Tarik Tambang Putri">Tarik Tambang Putri (Tim)</option>
+            <option value="Cabut Bilun Putra">Cabut Bilun Putra (Tim)</option> 
+            <option value="Cabut Bilun Putri">Cabut Bilun Putri (Tim)</option>
+          </select>
+          <div class="custom-select-arrow absolute inset-y-0 right-0 flex items-center px-3 text-gray-700">
+             <i class="fas fa-chevron-down fa-xs"></i>
+          </div>
+        </div>
+         <p id="lombaError" class="error-message hidden mt-1">Lomba harus dipilih.</p>
+      </div>
+
+      <div id="vocalSoloSection" class="hidden mb-7 p-5 bg-indigo-50 border-l-4 border-indigo-400 rounded-lg">
+        <h3 class="text-lg font-semibold text-indigo-700 mb-4"><i class="fas fa-music mr-2"></i>Detail Vocal Solo</h3>
+        <div class="mb-4">
+          <label for="judulLagu" class="block text-sm font-medium text-gray-700 mb-1.5">Judul Lagu <span class="text-red-500">*</span></label>
+          <input type="text" id="judulLagu" name="judulLagu" placeholder="Masukkan judul lagu yang akan dibawakan" class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none text-sm sm:text-base">
+          <p id="judulLaguError" class="error-message hidden mt-1">Judul lagu tidak boleh kosong.</p>
+        </div>
+        <div>
+          <label for="linkYouTube" class="block text-sm font-medium text-gray-700 mb-1.5">Link YouTube Musik <span class="optional-label">(Opsional, untuk karaoke)</span></label>
+          <input type="url" id="linkYouTube" name="linkYouTube" placeholder="Contoh: https://www.youtube.com/watch?v=..." class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none text-sm sm:text-base">
+          <p id="linkYouTubeError" class="error-message hidden mt-1">Format link YouTube tidak valid.</p>
+        </div>
+      </div>
+      
+      <div id="anggotaSection" class="hidden mb-7 p-5 bg-sky-50 border-l-4 border-sky-400 rounded-lg">
+        <h3 class="text-lg font-semibold text-sky-700 mb-4"><i class="fas fa-users mr-2"></i>Data Anggota Tim</h3>
+        <div class="mb-4">
+          <label for="jumlahAnggota" class="block text-sm font-medium text-gray-700 mb-1.5">Jumlah Anggota <span class="text-red-500">*</span></label>
+          <input type="number" id="jumlahAnggota" name="jumlahAnggota" min="1" max="10" oninput="generateAnggotaInputs()" placeholder="Jumlah pemain dalam tim" class="input-field w-full px-4 py-3 rounded-lg border focus:outline-none text-sm sm:text-base">
+           <p id="jumlahAnggotaError" class="error-message hidden mt-1">Jumlah anggota tidak valid (antara 1-10).</p>
+        </div>
+        <div id="listAnggota" class="space-y-3.5">
+          </div>
+      </div>
+
+      <button type="button" id="submitButton" onclick="processRegistration()" class="btn-primary w-full font-semibold py-3.5 px-4 rounded-xl text-base sm:text-lg shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 flex items-center justify-center gap-2.5">
+        <span id="buttonText">
+          <i class="fab fa-whatsapp fa-lg mr-1.5"></i>
+          Kirim via WhatsApp
+        </span>
+        <div id="loadingSpinner" class="loading-spinner hidden"></div>
+      </button>
+    </form>
+
+    <footer class="text-center mt-12 sm:mt-20 py-8 border-t border-indigo-200">
+      <p class="text-sm text-gray-600">Dibuat dengan <i class="fas fa-heart text-red-500"></i> oleh M. Irham</p>
+      <p class="text-sm text-gray-500">&copy; 2025 SMP Negeri 3 Mentok - Class Meeting</p>
+    </footer>
+  </main>
+
+  <script>
+    // DOM Elements
+    const welcomeMessageDiv = document.getElementById('welcomeMessage');
+    const registrationFormDiv = document.getElementById('registrationForm');
+    const lombaSelect = document.getElementById('lomba');
+    const anggotaSectionDiv = document.getElementById('anggotaSection');
+    const jumlahAnggotaInput = document.getElementById('jumlahAnggota');
+    const listAnggotaDiv = document.getElementById('listAnggota');
+    const vocalSoloSectionDiv = document.getElementById('vocalSoloSection');
+    const judulLaguInput = document.getElementById('judulLagu');
+    const linkYouTubeInput = document.getElementById('linkYouTube');
+    const submitButton = document.getElementById('submitButton');
+    const buttonText = document.getElementById('buttonText');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const formFeedbackDiv = document.getElementById('formFeedback');
+
+    // Error message elements
+    const namaError = document.getElementById('namaError');
+    const kelasError = document.getElementById('kelasError');
+    const lombaError = document.getElementById('lombaError');
+    const jumlahAnggotaError = document.getElementById('jumlahAnggotaError');
+    const judulLaguError = document.getElementById('judulLaguError');
+    const linkYouTubeError = document.getElementById('linkYouTubeError');
+
+    // Define team competitions
+    const teamCompetitions = [
+        "Futsal Putra", "Tarik Tambang Putra", 
+        "Tarik Tambang Putri", "Cabut Bilun Putra", "Cabut Bilun Putri" // Updated "Cabut Bilun"
+    ];
+
+    // Function to show registration form and hide welcome message
+    function showRegistrationForm() {
+      welcomeMessageDiv.classList.add('hidden');
+      registrationFormDiv.classList.remove('hidden');
+      registrationFormDiv.classList.add('fade-in-up');
     }
-    
-    if (["Futsal Putra", "Futsal Putri", "Tarik Tambang", "Cabut Balon"].includes(lomba)) {
-      const jumlah = parseInt(document.getElementById('jumlahAnggota').value);
-      if (!jumlah || jumlah < 1) {
-        alert('Mohon masukkan jumlah anggota!');
-        return false;
+
+    // Function to handle changes in competition selection
+    function handleLombaChange() {
+      const selectedLomba = lombaSelect.value;
+      
+      // Reset all conditional sections and inputs
+      anggotaSectionDiv.classList.add('hidden');
+      jumlahAnggotaInput.value = '';
+      listAnggotaDiv.innerHTML = '';
+      jumlahAnggotaInput.required = false;
+      hideError(jumlahAnggotaError);
+
+      vocalSoloSectionDiv.classList.add('hidden');
+      judulLaguInput.value = '';
+      linkYouTubeInput.value = '';
+      judulLaguInput.required = false;
+      hideError(judulLaguError);
+      hideError(linkYouTubeError);
+
+      if (teamCompetitions.includes(selectedLomba)) {
+        anggotaSectionDiv.classList.remove('hidden');
+        anggotaSectionDiv.classList.add('fade-in-up');
+        jumlahAnggotaInput.required = true;
+      } else if (selectedLomba === "Vocal Solo") {
+        vocalSoloSectionDiv.classList.remove('hidden');
+        vocalSoloSectionDiv.classList.add('fade-in-up');
+        judulLaguInput.required = true;
       }
-      
+    }
+
+    // Function to generate input fields for team members
+    function generateAnggotaInputs() {
+      const jumlah = parseInt(jumlahAnggotaInput.value);
+      listAnggotaDiv.innerHTML = ''; 
+
+      // Validate number of members (1-10)
+      if (isNaN(jumlah) || jumlah < 1 || jumlah > 10) {
+        if (jumlahAnggotaInput.value !== "") { // Show error only if there's some input
+            displayError(jumlahAnggotaError, 'Jumlah anggota harus antara 1 dan 10.');
+        } else {
+            hideError(jumlahAnggotaError); // Hide if input is cleared
+        }
+        return;
+      }
+      hideError(jumlahAnggotaError); // Hide error if valid
+
+      // Create input fields for each member
       for (let i = 1; i <= jumlah; i++) {
-        const anggota = document.getElementById(`anggota${i}`).value;
-        if (!anggota) {
-          alert(`Mohon lengkapi data Anggota ${i}!`);
-          return false;
+        const div = document.createElement('div');
+        div.className = 'relative';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = `anggota${i}`;
+        input.name = `anggota${i}`;
+        input.required = true;
+        input.placeholder = `Nama Anggota ${i}`;
+        input.className = 'input-field w-full px-4 py-2.5 rounded-md border text-sm focus:outline-none';
+        
+        const errorP = document.createElement('p');
+        errorP.id = `anggota${i}Error`;
+        errorP.className = 'error-message hidden mt-1 text-xs';
+
+        div.appendChild(input);
+        div.appendChild(errorP);
+        listAnggotaDiv.appendChild(div);
+      }
+    }
+    
+    // Helper function to display error message and style input
+    function displayError(element, message) {
+        if (element) {
+            element.textContent = message;
+            element.classList.remove('hidden');
+            const inputEl = document.getElementById(element.id.replace('Error', ''));
+            if (inputEl) inputEl.classList.add('border-red-400'); // Add red border to input
+        }
+    }
+
+    // Helper function to hide error message and reset input style
+    function hideError(element) {
+        if (element) {
+            element.classList.add('hidden');
+            const inputEl = document.getElementById(element.id.replace('Error', ''));
+            if (inputEl) inputEl.classList.remove('border-red-400'); // Remove red border
+        }
+    }
+    
+    // Function to validate URL format (basic check)
+    function isValidUrl(string) {
+        if (!string) return true; // Optional field, so empty is valid
+        try {
+            new URL(string); // Check if it can be parsed as a URL
+            return true;
+        } catch (_) {
+            return false;  
+        }
+    }
+
+    // Function to validate the entire form
+    function validateForm() {
+      let isValid = true;
+      formFeedbackDiv.innerHTML = ''; // Clear previous global feedback
+
+      // Hide all errors before re-validating
+      hideError(namaError);
+      hideError(kelasError);
+      hideError(lombaError);
+      hideError(jumlahAnggotaError);
+      hideError(judulLaguError);
+      hideError(linkYouTubeError);
+      listAnggotaDiv.querySelectorAll('input').forEach(input => { // Hide errors for dynamic member inputs
+          const errorEl = document.getElementById(input.id + 'Error');
+          if(errorEl) hideError(errorEl);
+      });
+
+
+      // Validate Nama
+      const nama = document.getElementById('nama').value.trim();
+      if (nama === '') {
+        displayError(namaError, 'Nama lengkap / nama tim tidak boleh kosong.');
+        isValid = false;
+      }
+
+      // Validate Kelas
+      const kelas = document.getElementById('kelas').value;
+      if (kelas === '') {
+        displayError(kelasError, 'Kelas harus dipilih.');
+        isValid = false;
+      }
+
+      // Validate Lomba
+      const lomba = lombaSelect.value;
+      if (lomba === '') {
+        displayError(lombaError, 'Lomba harus dipilih.');
+        isValid = false;
+      }
+
+      // Validate Anggota if team competition
+      if (teamCompetitions.includes(lomba)) {
+        const jumlah = parseInt(jumlahAnggotaInput.value);
+        if (isNaN(jumlah) || jumlah < 1 || jumlah > 10) {
+          displayError(jumlahAnggotaError, 'Jumlah anggota harus antara 1 dan 10.');
+          isValid = false;
+        } else {
+          // Validate each member's name
+          for (let i = 1; i <= jumlah; i++) {
+            const anggotaInput = document.getElementById(`anggota${i}`);
+            const anggotaErrorEl = document.getElementById(`anggota${i}Error`);
+            if (anggotaInput && anggotaInput.value.trim() === '') {
+              displayError(anggotaErrorEl, `Nama Anggota ${i} tidak boleh kosong.`);
+              isValid = false;
+            }
+          }
+        }
+      } else if (lomba === "Vocal Solo") { // Validate Vocal Solo specific fields
+        const judulLagu = judulLaguInput.value.trim();
+        if (judulLagu === '') {
+          displayError(judulLaguError, 'Judul lagu tidak boleh kosong.');
+          isValid = false;
+        }
+        const linkYouTube = linkYouTubeInput.value.trim();
+        if (linkYouTube !== '' && !isValidUrl(linkYouTube)) { // Validate URL only if filled
+            displayError(linkYouTubeError, 'Format link YouTube tidak valid. Contoh: https://www.youtube.com/watch?v=...');
+            isValid = false;
         }
       }
+      return isValid;
     }
-    
-    return true;
-  }
 
-  function kirimWhatsApp() {
-    if (!validateForm()) return;
-    
-    const nama = document.getElementById('nama').value;
-    const kelas = document.getElementById('kelas').value;
-    const lomba = document.getElementById('lomba').value;
-    let pesan = `*Pendaftaran Class Meeting 2025*\n\nNama / Tim: ${nama}\nKelas: ${kelas}\nLomba: ${lomba}`;
-
-    if (["Futsal Putra", "Futsal Putri", "Tarik Tambang", "Cabut Balon"].includes(lomba)) {
-      const jumlah = parseInt(document.getElementById('jumlahAnggota').value);
-      pesan += `\n\n*Daftar Anggota (${jumlah} orang):*`;
-      for (let i = 1; i <= jumlah; i++) {
-        const anggota = document.getElementById(`anggota${i}`).value;
-        pesan += `\n${i}. ${anggota}`;
+    // Function to process registration and send WhatsApp message
+    function processRegistration() {
+      if (!validateForm()) { // If form is not valid, show error and stop
+        formFeedbackDiv.innerHTML = '<p class="text-red-600 p-3 bg-red-100 rounded-lg border border-red-300"><i class="fas fa-exclamation-circle mr-2"></i>Mohon perbaiki kesalahan pada formulir.</p>';
+        // Scroll to the first visible error message for better UX
+        const firstError = document.querySelector('.error-message:not(.hidden)');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
       }
-    }
-    
-    pesan += "\n\n_Saya Mendaftarkan diri saya untuk ikut kegiatan Class meeting SMP negeri 3 mentok 2025, dengan data di atas._";
+      
+      formFeedbackDiv.innerHTML = ''; // Clear global feedback if validation passes
 
-    const nomorTujuan = "6281274128917"; // Nomor tujuan
-    const url = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(pesan)}`;
-    window.open(url, "_blank");
-  }
-</script>
+      // Show loading state on button
+      buttonText.classList.add('hidden');
+      loadingSpinner.classList.remove('hidden');
+      submitButton.disabled = true;
+
+      // Gather form data
+      const nama = document.getElementById('nama').value.trim();
+      const kelas = document.getElementById('kelas').value;
+      const lomba = lombaSelect.value;
+      
+      // Construct WhatsApp message
+      let pesan = `*PENDAFTARAN CLASS MEETING SMPN 3 MENTOK 2025*\n======================================\n\n*Nama/Tim:* ${nama}\n*Kelas:* ${kelas}\n*Lomba:* ${lomba}`;
+
+      if (teamCompetitions.includes(lomba)) {
+        const jumlah = parseInt(jumlahAnggotaInput.value);
+        pesan += `\n\n*Anggota Tim (${jumlah} orang):*`;
+        for (let i = 1; i <= jumlah; i++) {
+          const anggota = document.getElementById(`anggota${i}`).value.trim();
+          pesan += `\n${i}. ${anggota}`;
+        }
+      } else if (lomba === "Vocal Solo") {
+        const judulLagu = judulLaguInput.value.trim();
+        const linkYouTube = linkYouTubeInput.value.trim();
+        pesan += `\n*Judul Lagu:* ${judulLagu}`;
+        if (linkYouTube) { // Add YouTube link only if provided
+          pesan += `\n*Link YouTube Musik:* ${linkYouTube}`;
+        }
+      }
+      
+      pesan += "\n\n======================================\n_Terima kasih telah mendaftar. Mohon tunggu konfirmasi selanjutnya dari panitia._";
+
+      // Simulate a short delay for loading effect then open WhatsApp
+      setTimeout(() => {
+        const nomorTujuan = "6281274128917"; // GANTI DENGAN NOMOR PANITIA YANG BENAR
+        const url = `https://wa.me/${nomorTujuan}?text=${encodeURIComponent(pesan)}`;
+        window.open(url, "_blank"); // Open WhatsApp in a new tab
+
+        // Reset button state
+        buttonText.classList.remove('hidden');
+        loadingSpinner.classList.add('hidden');
+        submitButton.disabled = false;
+        
+        // Show success message (optional: reset form)
+        formFeedbackDiv.innerHTML = '<p class="text-green-700 p-3 bg-green-100 rounded-lg border border-green-300"><i class="fas fa-check-circle mr-2"></i>Pendaftaran sedang dialihkan ke WhatsApp. Anda bisa menutup halaman ini atau mendaftar lagi.</p>';
+        // registrationFormDiv.reset(); // Uncomment to reset form fields after submission
+        // handleLombaChange(); // Reset conditional sections (like members, vocal solo details)
+      }, 1200); // 1.2 second delay
+    }
+
+    // Initial call on page load to set correct state for conditional sections
+    document.addEventListener('DOMContentLoaded', function() {
+        handleLombaChange(); 
+    });
+
+  </script>
 
 </body>
 </html>
